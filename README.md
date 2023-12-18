@@ -80,15 +80,15 @@ flag `wgmy{d1df8b8811dbe22f3dce67ef2998f21c}`
 
 ## Reverse - Defeat the boss!
 
-- download the given file `Game_boxed.exe` and open the file, actually this is rpgmaker game
+- download the given file `Game_boxed.exe` and open the file, actually this is RPG Maker Game
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/2fccc6b7-9102-4630-8a95-a96b7c57dc69)
 
-- after exploring the whole game, there are chest in the game but the chest is outside the map
+- after exploring the whole game, there is a chest in the game but the chest is outside the map
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/ab7535ab-0bce-4723-a8f4-9bf2394ceda5)
 
-- i am gamer before this so, i know some mechanics of the game, i need to find place where i can exit the map, i found that 2 places you can get out the map, refer to image below
+- i am gamer before this, i know some mechanics of the game, so i need to find place where i can exit the map, i found that 2 places you can get out the map, refer to image below
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/5f23c07a-5d18-4b0e-b69c-c5802d84bcb2)
 
@@ -106,19 +106,19 @@ flag `wgmy{d1df8b8811dbe22f3dce67ef2998f21c}`
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/f2e95821-7d9c-4596-bf1a-6b8bb66bf102)
 
-- after edited the save game, download and replace the same name file, open game and load the new edited save game, and buy `Dead Sea Scroll 500000` and use the item, and got pieces of the base64 flag
+- after edited the save game, download and replace the same name file, open game and load the new edited save game, and buy `Dead Sea Scroll 500000` and use the item, and got another pieces of the base64 flag
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/c1a9ee9b-f13b-43c6-9d1b-d99263e3b62f)
 
-- kill the boss, got pieces of the base64 flag
+- kill the boss, got another pieces of the base64 flag
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/154a67bd-e676-4457-9a25-9fd4331d01f1)
 
-- last part is i need to guess the number, from this part i dont how to continue
+- last part is i need to guess the number, from this part i dont how to continue the game
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/da685690-b237-4e86-8a2d-77b7c6db101d)
 
-- so i decided to check strings of the file and grep the keyword
+- so i decided to check strings of the file and grep the keyword `Hey hey`
 
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/35eea658-4014-4ecd-b0e3-a0143404ac69)
 
@@ -127,3 +127,24 @@ flag `wgmy{d1df8b8811dbe22f3dce67ef2998f21c}`
 ![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/38779e2c-7b0d-48b3-831e-508578841190)
 
 flag `wgmy{9dedace597929c5316d6443d2783d291}`
+
+## Misc - Splice
+
+- given 3 part of QR pages
+
+| page 1 | page 2 | page 3 |
+|--------|--------|--------|
+| ![page1](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/37c41282-c66a-4a25-866c-4c4ce19164c3) | ![page2](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/c24dc7d2-1805-4724-b837-2fe45fc230be) | ![page3](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/779ede0a-af9e-40ba-a802-cab957dbb6ef) |
+
+- there are 2 part of QR, i just create
+
+| QR 1 | QR 2 |
+|------|------|
+| ![qr1](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/a4f9aec3-266d-469c-b9de-6a6c5fe18d68) | ![qr2](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/7f1b3d99-6977-4bd1-b11a-7c580b47b128) |
+| QR 1 = Page 1 \(Dark) \+ Page 3 \(Dark) | QR 2 = Page 2 \(Dark) \+ Page 3 \(Dark) \+ \[Page 3 \(Gray) - \[Page 3 \(Gray) ∩ QR1 \(Dark)\]\] |
+
+- just combine the result of both QR will get flag in base64
+
+![image](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/a45d8818-ad30-469c-903c-bf3ea867e8c4)
+
+flag `wgmy{5d7bdea65472ca9e615fcbd0f90a3b49}`

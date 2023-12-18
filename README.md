@@ -136,7 +136,7 @@ flag `wgmy{9dedace597929c5316d6443d2783d291}`
 |--------|--------|--------|
 | ![page1](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/37c41282-c66a-4a25-866c-4c4ce19164c3) | ![page2](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/c24dc7d2-1805-4724-b837-2fe45fc230be) | ![page3](https://github.com/0hanif0/WGMY2023CTF-Writeups/assets/23289982/779ede0a-af9e-40ba-a802-cab957dbb6ef) |
 
-- there are 2 part of QR, i just create
+- there are 2 part of QR i got
 
 | QR 1 | QR 2 |
 |------|------|
